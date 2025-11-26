@@ -1,0 +1,99 @@
+---
+title: "Untitled"
+author: "Gustav Helms (qbg413)"
+date: "2025-09-08"
+output: html_document
+---
+
+```{r}
+library(Seurat)
+library(tidyverse)
+```
+
+```{r}
+# ---- 1. Load the counts matrix ----
+# The file is a TSV with genes in rows and cells in columns
+counts <- read.delim(
+  "GSE114412_Stage_6.all.processed_counts.tsv",
+  header = TRUE,
+  row.names = 1,
+  check.names = FALSE
+)
+# Convert to sparse matrix (much faster & lighter in Seurat)
+counts <- as(as.matrix(counts), "dgCMatrix")
+
+# Transpose count matrix to cell x genes
+counts <- t(counts)
+
+# ---- 2. Load cell metadata ----
+meta <- read.delim(
+  "GSE114412_Stage_6.all.cell_metadata.tsv",
+  header = TRUE,
+  row.names = 1
+)
+
+# ---- 3. Create Seurat object ----
+seu <- CreateSeuratObject(
+  counts = counts,
+  meta.data = meta,
+  project = "Veres2019_SCbeta"
+)
+
+# ---- 4. Proceed with your normal workflow ----
+# Normalize, find variable features, etc.
+#seu <- NormalizeData(seu)
+#seu <- FindVariableFeatures(seu)
+
+# ---- 5. Create tSNE reduction
+#seu <- LoadSeuratRds("GSE114412_processed.rds")
+tsne_coords <- as.matrix(seu@meta.data[, c("tSNE_dim1", "tSNE_dim2")])
+rownames(tsne_coords) <- rownames(seu@meta.data)  # cell names must match
+
+# Add to Seurat object
+seu[["tsne"]] <- CreateDimReducObject(
+  embeddings = tsne_coords,
+  key = "tSNE_",
+  assay = DefaultAssay(seu)
+)
+
+# Remove from meta_data
+seu@meta.data <- seu@meta.data %>% 
+  mutate(tSNE_dim1 = NULL, tSNE_dim2 = NULL)
+
+# ---- 5. Save seurat RDS for later use
+saveRDS(seu, "GSE114412_processed.rds")
+```
+
+```{r}
+seu <- readRDS("GSE114412_processed.rds")
+
+seu@meta.data <- rename(seu@meta.data, "cell_type" = Assigned_cluster)
+
+in_vitro_cluster <- seu
+
+in_vitro_subcluster <- seu
+
+in_vitro_subcluster@meta.data <- in_vitro_subcluster@meta.data %>% 
+  select(-c(cell_type)) %>% 
+  rename("cell_type" = Assigned_subcluster)
+```
+
+
+```{r}
+# Raw count matrix (genes × cells)
+X <- GetAssayData(in_vitro_cluster[["RNA"]], slot = "counts")
+
+# Cell metadata (cells × variables)
+meta_cluster <- in_vitro_cluster@meta.data
+
+meta_subcluster <- in_vitro_subcluster@meta.data
+
+library(Matrix)
+
+writeMM(X, "GSE114412_counts.mtx")
+write.csv(meta_cluster, "meta_cluster.csv")
+write.csv(meta_subcluster, "meta_subcluster.csv")
+write.csv(data.frame(gene = rownames(X)), "var.csv", row.names = FALSE)
+
+
+```
