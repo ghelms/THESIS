@@ -1,0 +1,40 @@
+"group","subset_id","nodes","mean_cor","n_cells"
+2,1,"brain_Microglia;eye_Microglia",0.703882316145959,2
+2,2,"ovary_Double negative T cell;thymus_Double negative T cell;tonsil_Double negative T cell",0.87587048787115,3
+2,3,"adipose_GZMK CD8 T cell;bladder_GZMK CD8 T cell;blood_GZMK CD8 T cell;bone marrow_GZMK CD8 T cell;breast_GZMK CD8 T cell;mouth_GZMK CD8 T cell;intestine_GZMK CD8 T cell;liver_GZMK CD8 T cell;lung_GZMK CD8 T cell;pancreas_GZMK CD8 T cell;stomach_GZMK CD8 T cell",0.94564874556775,11
+2,4,"bladder_CDH19+LAMA2+ fibroblast;breast_CDH19+LAMA2+ fibroblast;mouth_CDH19+LAMA2+ fibroblast;skeletal muscle_CDH19+LAMA2+ fibroblast",0.889260047316343,4
+2,5,"adipose_GZMB CD8 T cell;blood_GZMB CD8 T cell;bone marrow_GZMB CD8 T cell;breast_GZMB CD8 T cell;mouth_GZMB CD8 T cell;intestine_GZMB CD8 T cell;liver_GZMB CD8 T cell;lung_GZMB CD8 T cell;stomach_GZMB CD8 T cell",0.945529699357649,9
+3,1,"ovary_CD16 NK cell;liver_MAIT cell",0.910363152657327,2
+3,2,"pancreas_Beta cell;pancreas_Delta cell",0.947082344475328,2
+3,3,"lung_Arterial EC;bladder_Capillary EC",0.91225786904979,2
+3,4,"thymus_Vascular smooth muscle cell;stomach_Vascular smooth muscle cell",0.942212599333133,2
+3,5,"kidney_Plasma cell;bone marrow_Plasma cell",0.945860761391445,2
+4,1,"pancreas_Memory CD4 T cell;liver_GZMK CD8 T cell;skeletal muscle_Memory CD4 T cell",0.93565761053098,3
+4,2,"bladder_GZMK CD8 T cell;adipose_GZMB CD8 T cell;breast_GZMK CD8 T cell",0.929214997388294,3
+4,3,"skin_APOD+PTGDS+ fibroblast;eye_APOD+PTGDS+ fibroblast;breast_CXCL+ pericyte",0.903930920405159,3
+4,4,"bone marrow_Lymphoid pre-pDC;testis_Cycling macrophage;liver_Cycling T/NK cell",0.912018844206913,3
+5,1,"skin_Vascular smooth muscle cell;breast_CREB+MT1A+ vascular smooth muscle cell",0.934523395332847,2
+5,2,"bladder_Cycling T cell;tonsil_Memory CD8 T cell",0.921021095526612,2
+5,3,"liver_Small cholangiocyte;pancreas_Pancreatic ductal cell",0.932222993548692,2
+5,4,"ovary_Cycling perivascular cell;ovary_Glial cell",0.9131884247699,2
+5,5,"testis_Peritubular myoid cell;lung_Myofibroblast",0.909954065031268,2
+5,1,"brain_L2/3 excitatory neuron;brain_L5b excitatory neuron;brain_L5 excitatory neuron",0.934399212461278,3
+5,2,"intestine_cDC1;bladder_cDC1;liver_cDC1",0.946127460679342,3
+5,3,"liver_Neutrophil;pancreas_Neutrophil;skeletal muscle_Neutrophil",0.926408994491606,3
+5,4,"adrenal gland_Steroidogenic cell;adrenal gland_Capsular cell;adrenal gland_Endothelial cell",0.957191690328241,3
+5,5,"bone marrow_GZMB CD8 T cell;blood_Naive CD4 T cell;lung_CD16 NK cell",0.92692302764274,3
+5,1,"stomach_Plasma cell;bladder_Plasma cell;breast_Plasma cell;liver_Plasma cell",0.930756458639843,4
+5,2,"mouth_GZMB CD8 T cell;lung_Cycling T/NK cell;liver_GZMK CD8 T cell;ovary_Double negative T cell",0.915382806853551,4
+5,3,"breast_PIP mammary luminal cell;skin_Secretory cell;breast_Secretoglobin mammary luminal cell;breast_SAA2 mammary luminal progenitor",0.94211792648851,4
+5,4,"adipose_MAIT cell;lung_Memory CD4 T cell;eye_T cell;bladder_CD16 NK cell",0.95177461209828,4
+5,1,"tonsil_Naive CD4 T cell;bone marrow_INF-activated T cell;adipose_GZMB CD8 T cell;bladder_Treg cell;blood_Memory CD4 T cell",0.935362811304767,5
+5,2,"breast_CDH19+LAMA2+ fibroblast;thymus_CFD+MGP+ fibroblast;adipose_Adipocyte progenitor;skin_CFD+MGP+ fibroblast;breast_GPC3+ fibroblast",0.929737218527326,5
+5,3,"breast_APOD+PTGDS+ fibroblast;breast_CFD+MGP+ fibroblast;skin_CCL19+APOE+ fibroblast;breast_GPC3+ fibroblast;breast_KRT6B mammary basal cell",0.899624316637202,5
+5,4,"bladder_CCL19/21 pericyte;bladder_CCL19+APOE+ fibroblast;lung_CFD+MGP+ fibroblast;skin_CCL19+APOE+ fibroblast;adipose_Vascular smooth muscle cell",0.903446387772147,5
+5,1,"skin_G2/M phase GPC3+ fibroblast;skin_ADAM12+ fibroblast;breast_CFD+MGP+ fibroblast;skin_CD9+APCDD1+ fibroblast;skin_APOD+PTGDS+ fibroblast;adipose_Fibroblast",0.89611773754586,6
+5,2,"stomach_NK cell;bone marrow_Treg cell;bladder_Treg cell;adipose_GZMB CD8 T cell;thymus_Memory CD8 T cell;skin_Tfh cell",0.933086046007638,6
+5,3,"intestine_Gamma delta T cell;adipose_HSP+ T cell;intestine_Activated CD8 T cell;intestine_CXCL13 exhausted CD8 T cell;bladder_CD4 T cell;blood_Gamma delta T cell",0.920368088805036,6
+5,4,"bladder_MFAP5+IGFBP6+ fibroblast;skeletal muscle_CDH19+LAMA2+ fibroblast;bladder_CXCL14+C7+ fibroblast;skin_FGFBP2+OLFML2A+ fibroblast;bladder_CCL19+APOE+ fibroblast;skeletal muscle_CFD+MGP+ fibroblast",0.925149347125761,6
+5,1,"skin_pDC;kidney_cDC1;blood_Memory B cell;blood_Dendritic cell;bladder_cDC2;bone marrow_pDC;blood_pDC",0.913152152076341,7
+5,2,"testis_Leydig cell progenitor;ovary_S phase GPC3+ fibroblast;testis_Cycling Leydig cell;testis_Sertoli and Interstitial cell common progenitor;ovary_SPRR2F+ pericyte;ovary_G2/M phase GPC3+ fibroblast;testis_AFP+ epithelial cell",0.933002084185394,7
+5,3,"testis_Red blood cell;adrenal gland_T/NK cell;testis_Capillary EC;ovary_G2/M phase GPC3+ fibroblast;thymus_Medullary thymic epithelial cell;testis_INSL3+ Leydig cell;ovary_Pericyte",0.899204946455163,7
